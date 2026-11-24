@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Koushik H Halder — Administration & Operations Professional</title>
+<meta name="description" content="Digital CV of Koushik H Halder — Administration & Operations professional with 12+ years in office administration, facility management, procurement, payroll, events, logistics and IT support. Based in Gurugram, India.">
+<meta name="theme-color" content="#070a12">
+<meta property="og:title" content="Koushik H Halder — Digital CV">
+<meta property="og:description" content="Administration & Operations professional · 12+ years · Gurugram, India">
+<meta property="og:type" content="profile">
+<meta property="og:image" content="assets/photo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#070a12; --bg2:#0b1020; --card:rgba(255,255,255,.04); --card-b:rgba(255,255,255,.09);
+  --text:#e8ecf5; --muted:#8d97ad; --a1:#22d3ee; --a2:#8b5cf6; --a3:#f472b6;
+  --grad:linear-gradient(120deg,var(--a1),var(--a2) 55%,var(--a3));
+  --radius:20px; --maxw:1120px;
+}
+:root[data-theme="light"]{
+  --bg:#f5f7fb; --bg2:#ffffff; --card:rgba(255,255,255,.75); --card-b:rgba(15,23,42,.09);
+  --text:#0f172a; --muted:#5b6478; --a1:#0891b2; --a2:#7c3aed; --a3:#db2777;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased;transition:background .4s,color .4s}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif;line-height:1.15;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}
+.mono{font-family:'JetBrains Mono',monospace}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+section{padding:96px 0;position:relative}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* animated background */
+.bg-fx{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.blob{position:absolute;border-radius:50%;filter:blur(110px);opacity:.28;animation:float 18s ease-in-out infinite}
+.b1{width:520px;height:520px;background:var(--a2);top:-120px;left:-100px}
+.b2{width:460px;height:460px;background:var(--a1);top:35%;right:-140px;animation-delay:-6s}
+.b3{width:420px;height:420px;background:var(--a3);bottom:-140px;left:25%;animation-delay:-12s;opacity:.18}
+:root[data-theme="light"] .blob{opacity:.16}
+.grid-fx{position:absolute;inset:0;background-image:linear-gradient(var(--card-b) 1px,transparent 1px),linear-gradient(90deg,var(--card-b) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse at 50% 20%,#000 20%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse at 50% 20%,#000 20%,transparent 70%);opacity:.5}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(50px,-40px) scale(1.08)}66%{transform:translate(-40px,50px) scale(.95)}}
+
+/* progress + nav */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--grad);z-index:200}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:.3s}
+nav.scrolled{background:color-mix(in srgb,var(--bg) 78%,transparent);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--card-b)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:'Space Grotesk';font-weight:700;font-size:1.15rem}
+.logo span{color:var(--a1)}
+.links{display:flex;gap:6px;align-items:center}
+.links a{padding:8px 14px;border-radius:10px;font-size:.9rem;color:var(--muted);transition:.25s}
+.links a:hover,.links a.active{color:var(--text);background:var(--card)}
+.icon-btn{width:40px;height:40px;border-radius:12px;border:1px solid var(--card-b);background:var(--card);color:var(--text);cursor:pointer;display:grid;place-items:center;font-size:1rem;transition:.25s}
+.icon-btn:hover{border-color:var(--a1);transform:translateY(-2px)}
+.burger{display:none}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:14px;font-weight:600;font-size:.95rem;border:1px solid var(--card-b);cursor:pointer;transition:.3s;position:relative;overflow:hidden}
+.btn.primary{background:var(--grad);color:#fff;border:none;box-shadow:0 10px 30px -10px var(--a2)}
+.btn.primary:hover{transform:translateY(-3px);box-shadow:0 16px 36px -10px var(--a2)}
+.btn.ghost{background:var(--card);backdrop-filter:blur(10px)}
+.btn.ghost:hover{border-color:var(--a1);transform:translateY(-3px)}
+
+/* hero */
+#home{min-height:100vh;display:flex;align-items:center;padding-top:110px}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border-radius:99px;border:1px solid var(--card-b);background:var(--card);font-size:.82rem;color:var(--muted);margin-bottom:26px}
+.dot{width:8px;height:8px;border-radius:50%;background:#34d399;box-shadow:0 0 0 0 #34d399;animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px transparent}100%{box-shadow:0 0 0 0 transparent}}
+h1{font-size:clamp(2.5rem,6vw,4.4rem);font-weight:700;margin-bottom:16px}
+.role{font-size:clamp(1.1rem,2.4vw,1.5rem);color:var(--muted);min-height:2em;margin-bottom:22px}
+.role b{color:var(--a1);font-weight:500}
+.cursor{display:inline-block;width:2px;height:1.1em;background:var(--a1);margin-left:3px;vertical-align:-3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.lead{color:var(--muted);max-width:560px;margin-bottom:34px;font-size:1.04rem}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:34px}
+.socials{display:flex;gap:12px;flex-wrap:wrap}
+.chip-link{display:flex;align-items:center;gap:8px;font-size:.88rem;color:var(--muted);transition:.25s}
+.chip-link:hover{color:var(--a1)}
+.photo-wrap{position:relative;max-width:380px;margin-left:auto;perspective:900px}
+.photo-ring{position:absolute;inset:-14px;border-radius:32px;background:var(--grad);filter:blur(24px);opacity:.45;animation:spin 8s linear infinite}
+@keyframes spin{to{filter:blur(24px) hue-rotate(360deg)}}
+.photo{position:relative;border-radius:28px;overflow:hidden;border:1px solid var(--card-b);aspect-ratio:4/4.7;transition:transform .2s ease-out;transform-style:preserve-3d}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block}
+.float-card{position:absolute;padding:12px 16px;border-radius:16px;background:color-mix(in srgb,var(--bg2) 82%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--card-b);font-size:.82rem;animation:bob 6s ease-in-out infinite;box-shadow:0 14px 36px -14px #000}
+.float-card b{display:block;font-family:'Space Grotesk';font-size:1.25rem}
+.fc1{left:-34px;bottom:56px}
+.fc2{right:-22px;top:34px;animation-delay:-3s}
+@keyframes bob{50%{transform:translateY(-12px)}}
+.scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);width:26px;height:42px;border:2px solid var(--card-b);border-radius:20px}
+.scroll-hint::after{content:"";position:absolute;top:8px;left:50%;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:var(--a1);animation:wheel 1.8s infinite}
+@keyframes wheel{0%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(14px)}}
+
+/* section heads */
+.eyebrow{font-family:'JetBrains Mono';font-size:.8rem;color:var(--a1);letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px;display:block}
+.sec-title{font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:14px}
+.sec-sub{color:var(--muted);max-width:620px;margin-bottom:54px}
+
+/* glass card */
+.card{background:var(--card);border:1px solid var(--card-b);border-radius:var(--radius);padding:28px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:.35s;position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),color-mix(in srgb,var(--a2) 22%,transparent),transparent 45%);opacity:0;transition:.4s;pointer-events:none}
+.card:hover{transform:translateY(-6px);border-color:color-mix(in srgb,var(--a1) 45%,var(--card-b))}
+.card:hover::before{opacity:1}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:-30px;padding-bottom:40px}
+.stat{text-align:center;padding:26px 14px}
+.stat .num{font-family:'Space Grotesk';font-size:2.6rem;font-weight:700}
+.stat p{color:var(--muted);font-size:.86rem}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:28px}
+.about-grid p{color:var(--muted);margin-bottom:16px}
+.info-list{list-style:none;display:grid;gap:16px}
+.info-list li{display:flex;gap:14px;align-items:flex-start;font-size:.93rem}
+.info-list i{font-style:normal;width:38px;height:38px;border-radius:11px;background:var(--card);border:1px solid var(--card-b);display:grid;place-items:center;flex:none}
+.info-list small{display:block;color:var(--muted);font-size:.76rem;text-transform:uppercase;letter-spacing:.08em}
+.info-list a:hover{color:var(--a1)}
+
+/* timeline */
+.timeline{position:relative;padding-left:36px}
+.timeline::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--a1),var(--a2),transparent)}
+.job{position:relative;margin-bottom:28px}
+.job::before{content:"";position:absolute;left:-36px;top:30px;width:18px;height:18px;border-radius:50%;background:var(--bg);border:3px solid var(--a1);box-shadow:0 0 18px var(--a1)}
+.job-head{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 20px;margin-bottom:6px}
+.job h3{font-size:1.3rem}
+.job .co{color:var(--a1);font-weight:500}
+.period{font-family:'JetBrains Mono';font-size:.78rem;color:var(--muted);padding:5px 12px;border-radius:99px;border:1px solid var(--card-b);height:fit-content;white-space:nowrap}
+.job .desc{color:var(--muted);font-size:.88rem;margin-bottom:14px}
+.job ul{list-style:none;display:grid;gap:9px}
+.job li{position:relative;padding-left:22px;font-size:.93rem;color:color-mix(in srgb,var(--text) 82%,var(--muted))}
+.job li::before{content:"▹";position:absolute;left:0;color:var(--a1)}
+.more-btn{margin-top:14px;background:none;border:none;color:var(--a1);font:inherit;font-size:.86rem;cursor:pointer}
+.job ul .extra{display:none}
+.job.open ul .extra{display:block}
+
+/* projects */
+.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.proj .ico{width:50px;height:50px;border-radius:14px;background:var(--grad);display:grid;place-items:center;font-size:1.4rem;margin-bottom:18px;box-shadow:0 10px 24px -10px var(--a2)}
+.proj h3{font-size:1.1rem;margin-bottom:10px}
+.proj p{color:var(--muted);font-size:.9rem}
+.tag{display:inline-block;margin-top:16px;font-family:'JetBrains Mono';font-size:.74rem;padding:4px 10px;border-radius:8px;background:color-mix(in srgb,var(--a1) 12%,transparent);color:var(--a1)}
+
+/* skills */
+.skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.skill-grid h3{font-size:1.05rem;margin-bottom:18px}
+.bars{display:grid;gap:16px}
+.bar-top{display:flex;justify-content:space-between;font-size:.88rem;margin-bottom:7px}
+.bar-top span:last-child{color:var(--muted);font-family:'JetBrains Mono';font-size:.78rem}
+.track{height:7px;border-radius:9px;background:var(--card-b);overflow:hidden}
+.fill{height:100%;width:0;border-radius:9px;background:var(--grad);transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+.chips{display:flex;flex-wrap:wrap;gap:9px}
+.chips span{padding:7px 14px;border-radius:99px;font-size:.84rem;border:1px solid var(--card-b);background:var(--card);transition:.25s}
+.chips span:hover{border-color:var(--a1);color:var(--a1);transform:translateY(-3px)}
+
+/* education */
+.edu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.edu-grid .card h3{font-size:1.1rem;margin:8px 0 4px}
+.edu-grid .card p{color:var(--muted);font-size:.9rem}
+.year{font-family:'JetBrains Mono';color:var(--a1);font-size:.8rem}
+.cert-list{list-style:none;display:grid;gap:14px}
+.cert-list li{display:flex;gap:12px;font-size:.92rem}
+.cert-list li::before{content:"✓";color:#34d399;font-weight:700}
+
+/* learning */
+.learn{display:flex;gap:30px;align-items:center;justify-content:space-between;flex-wrap:wrap;border-color:color-mix(in srgb,var(--a2) 40%,var(--card-b))}
+.learn h3{font-size:1.4rem;margin-bottom:8px}
+.learn p{color:var(--muted);max-width:560px;font-size:.95rem}
+
+/* contact */
+.contact-box{text-align:center;padding:60px 28px}
+.contact-box h2{font-size:clamp(1.9rem,4.4vw,3rem);margin-bottom:14px}
+.contact-box p{color:var(--muted);max-width:520px;margin:0 auto 32px}
+.contact-box .cta{justify-content:center}
+footer{text-align:center;padding:34px 0 50px;color:var(--muted);font-size:.84rem;border-top:1px solid var(--card-b)}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+/* responsive */
+@media(max-width:960px){
+  .hero{grid-template-columns:1fr;text-align:center}
+  .hero .lead{margin-inline:auto}
+  .cta,.socials{justify-content:center}
+  .photo-wrap{margin:0 auto;order:-1;max-width:290px}
+  .fc1{left:-18px}.fc2{right:-14px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .about-grid,.skill-grid,.edu-grid{grid-template-columns:1fr}
+  .proj-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:720px){
+  section{padding:72px 0}
+  .burger{display:grid}
+  .links{position:fixed;top:68px;left:0;right:0;flex-direction:column;align-items:stretch;padding:14px 20px 22px;background:var(--bg2);border-bottom:1px solid var(--card-b);transform:translateY(-130%);transition:transform .4s;gap:2px}
+  .links.open{transform:none}
+  .links a{padding:13px 14px}
+  .proj-grid{grid-template-columns:1fr}
+  .timeline{padding-left:28px}
+  .job::before{left:-28px}
+  .scroll-hint{display:none}
+  .fc1,.fc2{padding:9px 12px}
+}
+@media(max-width:420px){.stats{gap:12px}.stat .num{font-size:2.1rem}.btn{width:100%;justify-content:center}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}.fill{width:var(--w)!important}html{scroll-behavior:auto}}
+@media print{.bg-fx,nav,.scroll-hint,.progress{display:none}.reveal{opacity:1;transform:none}body{background:#fff;color:#000}}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="bg-fx"><div class="grid-fx"></div><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+
+<nav id="nav">
+  <div class="wrap nav-in">
+    <a href="#home" class="logo">K<span>.</span>Halder</a>
+    <div class="links" id="links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div style="display:flex;gap:10px">
+      <button class="icon-btn" id="theme" aria-label="Toggle theme">🌙</button>
+      <button class="icon-btn burger" id="burger" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<main>
+<!-- HERO -->
+<section id="home">
+  <div class="wrap hero">
+    <div>
+      <div class="badge reveal"><span class="dot"></span> Open to new opportunities · Gurugram, India</div>
+      <h1 class="reveal d1">Hi, I'm <span class="grad-text">Koushik H Halder</span></h1>
+      <div class="role mono reveal d2">&gt; <b id="typed"></b><span class="cursor"></span></div>
+      <p class="lead reveal d3">Administration &amp; Operations professional with 12+ years' experience across office administration, facility management, procurement, payroll, events, logistics and IT support — streamlining processes, managing vendors and improving workplace efficiency.</p>
+      <div class="cta reveal d3">
+        <a href="assets/Koushik_H_Halder_CV.pdf" class="btn primary" download>⬇ Download CV</a>
+        <a href="#contact" class="btn ghost">Let's talk →</a>
+      </div>
+      <div class="socials reveal d3">
+        <a class="chip-link" href="https://linkedin.com/in/koushikhhalder/" target="_blank" rel="noopener">🔗 LinkedIn</a>
+        <a class="chip-link" href="mailto:kousikx300@gmail.com">✉ kousikx300@gmail.com</a>
+        <a class="chip-link" href="tel:+917503046967">📞 +91 75030 46967</a>
+      </div>
+    </div>
+    <div class="photo-wrap reveal d2">
+      <div class="photo-ring"></div>
+      <div class="photo" id="photo"><img src="assets/photo.jpg" alt="Portrait of Koushik H Halder" width="640" height="752"></div>
+      <div class="float-card fc1"><b class="grad-text">12+ yrs</b>Admin &amp; Ops</div>
+      <div class="float-card fc2"><b class="grad-text">Microsoft</b>Strategic Partner</div>
+    </div>
+  </div>
+  <div class="scroll-hint"></div>
+</section>
+
+<!-- STATS -->
+<div class="wrap stats">
+  <div class="card stat reveal"><div class="num grad-text"><span class="count" data-to="12">0</span>+</div><p>Years of experience</p></div>
+  <div class="card stat reveal d1"><div class="num grad-text"><span class="count" data-to="200">0</span></div><p>Staff supervised at peak</p></div>
+  <div class="card stat reveal d2"><div class="num grad-text"><span class="count" data-to="25">0</span>%</div><p>Procurement cost reduction</p></div>
+  <div class="card stat reveal d3"><div class="num grad-text"><span class="count" data-to="32">0</span></div><p>Radar speed signs deployed</p></div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <span class="eyebrow reveal">// about me</span>
+    <h2 class="sec-title reveal">Keeping operations <span class="grad-text">running smoothly</span></h2>
+    <p class="sec-sub reveal">A motivated, proactive professional with strong interpersonal skills — recognised as a valuable asset for driving productivity and supporting organisational success.</p>
+    <div class="about-grid">
+      <div class="card reveal">
+        <p>I work at the intersection of people, process and technology. From onboarding and asset logistics to vendor SLAs, events, travel and L1 IT support, I keep the workplace efficient, safe and engaging.</p>
+        <p>I enjoy turning manual routines into simple automated systems — like the office check-in app I built on Power Automate that gets employees checked in within 5 seconds — and I bring the same hands-on approach to procurement, project execution and team leadership.</p>
+        <div class="chips" style="margin-top:20px">
+          <span>Vendor Management &amp; SLA</span><span>Procurement</span><span>Payroll</span><span>Facility Management</span><span>Event Management</span><span>IT Support</span>
+        </div>
+      </div>
+      <div class="card reveal d1">
+        <ul class="info-list">
+          <li><i>📍</i><div><small>Location</small>DLF Cybercity, Building 8B, Gurugram, Haryana</div></li>
+          <li><i>✉</i><div><small>Email</small><a href="mailto:kousikx300@gmail.com">kousikx300@gmail.com</a></div></li>
+          <li><i>📞</i><div><small>Phone</small><a href="tel:+917503046967">+91 75030 46967</a></div></li>
+          <li><i>🌐</i><div><small>Languages</small>English · Hindi · Bengali</div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="wrap">
+    <span class="eyebrow reveal">// experience</span>
+    <h2 class="sec-title reveal">Career <span class="grad-text">timeline</span></h2>
+    <p class="sec-sub reveal">12+ years across tech, manufacturing, retail facilities and wellness.</p>
+    <div class="timeline">
+
+      <article class="job card reveal">
+        <div class="job-head">
+          <div><h3>Administrator – People Function &amp; IT Operations</h3><span class="co">Leapwork India Pvt Ltd · Microsoft's Strategic Partner</span></div>
+          <span class="period">Aug 2024 – Present</span>
+        </div>
+        <p class="desc">Administration, IT Operations, Facility &amp; Event Management</p>
+        <ul>
+          <li>Streamline onboarding and offboarding, ensuring 100% timely asset allocation and recovery.</li>
+          <li>Manage office administration and facility operations — safety, compliance and efficient workplace management.</li>
+          <li>Enhance check-in and visitor management systems, improving security and operational efficiency.</li>
+          <li>Plan and execute offsites, team-building activities and cultural celebrations to boost engagement.</li>
+          <li class="extra">Manage employee reimbursements, payroll coordination, ETS and vendor payments with accuracy and timeliness.</li>
+          <li class="extra">Run lunch services and parking operations, ensuring employee convenience and satisfaction.</li>
+          <li class="extra">Coordinate domestic and international travel — itineraries, visa documentation and expense tracking.</li>
+          <li class="extra">Oversee asset logistics and inventory control: distribution, tracking and recovery.</li>
+          <li class="extra">Manage calendars, meeting coordination and administrative support for leaders.</li>
+          <li class="extra">Maintain stock of consumables, stationery and office supplies to prevent shortages.</li>
+          <li class="extra">Provide L1 IT troubleshooting, reducing downtime and improving productivity.</li>
+        </ul>
+        <button class="more-btn">Show more ↓</button>
+      </article>
+
+      <article class="job card reveal">
+        <div class="job-head">
+          <div><h3>Executive – Operations, Production &amp; Project Management</h3><span class="co">Logix ITS Inc · Canadian-based ITS company</span></div>
+          <span class="period">Jan 2019 – Jun 2024</span>
+        </div>
+        <p class="desc">5.5 years</p>
+        <ul>
+          <li>Managed procurement, vendors, SLA tracking, AMCs and contracts across technical, hardware, software, electrical, civil and office needs — optimising cost and service quality.</li>
+          <li>Directed office expansion projects: planning, budgeting, execution, quality assurance and on-time completion.</li>
+          <li>Supervised the assembly unit — staff training, production planning, quality checks, testing, maintenance and packaging.</li>
+          <li class="extra">Managed logistics and supply chain: local sourcing, import/export and CHA clearance.</li>
+          <li class="extra">Maintained inventory and invoicing in Zoho; handled stock reordering, E-way bills and delivery challans.</li>
+          <li class="extra">Oversaw IT systems and asset management, including AMC tracking for IT equipment, 3CX systems and cloud subscriptions.</li>
+          <li class="extra">Managed premises administration, housekeeping and pantry operations; arranged national and international travel for staff.</li>
+        </ul>
+        <button class="more-btn">Show more ↓</button>
+      </article>
+
+      <article class="job card reveal">
+        <div class="job-head">
+          <div><h3>Assistant Admin</h3><span class="co">MGF Mall Management Pvt. Ltd. · Facility Management</span></div>
+          <span class="period">Nov 2016 – Dec 2018</span>
+        </div>
+        <p class="desc">2.2 years</p>
+        <ul>
+          <li>Supervised a team of 200 staff — security, technical, parking, fire and housekeeping — for smooth mall operations.</li>
+          <li>Coordinated with accounts on invoice processing and verified bills; followed up with tenants on maintenance and electricity payments.</li>
+          <li>Monitored and maintained fire panels and alarm systems to ensure safety and security.</li>
+          <li class="extra">Tracked monthly collections and attendance for housekeeping, security, fire and parking staff.</li>
+          <li class="extra">Resolved tenant and customer complaints promptly; collaborated with HR, Finance, IT and business teams.</li>
+          <li class="extra">Managed AMCs for IT equipment and subscriptions; oversaw local purchases and maintenance contracts.</li>
+          <li class="extra">Reported to the General Manager on maintenance, daily collections, parking passes and total mall footfall.</li>
+        </ul>
+        <button class="more-btn">Show more ↓</button>
+      </article>
+
+      <article class="job card reveal">
+        <div class="job-head">
+          <div><h3>HR &amp; Admin Executive</h3><span class="co">Health Sanctuary Pvt. Ltd. · Health &amp; Wellness</span></div>
+          <span class="period">Jan 2015 – Oct 2016</span>
+        </div>
+        <p class="desc">1.10 years</p>
+        <ul>
+          <li>Oversaw attendance and time management across 14 branches.</li>
+          <li>Coordinated interviews for dieticians, doctors, accountants and managers; issued offer and appointment letters.</li>
+          <li class="extra">Completed joining formalities for new hires and posted vacancies on job portals.</li>
+          <li class="extra">Managed calendars, meetings and executive support for leadership teams.</li>
+          <li class="extra">Handled confidential information, reimbursements, records and petty cash.</li>
+        </ul>
+        <button class="more-btn">Show more ↓</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <span class="eyebrow reveal">// achievements</span>
+    <h2 class="sec-title reveal">Projects <span class="grad-text">delivered</span></h2>
+    <p class="sec-sub reveal">Selected work where process, people and technology came together.</p>
+    <div class="proj-grid">
+      <div class="card proj reveal"><div class="ico">⚡</div><h3>Custom Office Check-in System</h3><p>Built with Power Automate, Advanced Excel, Approval Flow, Microsoft Forms and Teams. Employees submit visit requests — including lunch and parking — and check in within 5 seconds, cutting wait times and improving the employee experience.</p><span class="tag">Power Automate</span></div>
+      <div class="card proj reveal d1"><div class="ico">🚦</div><h3>Gurgaon Traffic Police Project</h3><p>Led a team of 10 to deploy 32 radar speed signs across Gurugram, delivering on time. Personally assembled all the digital speed signs installed on the city's roads.</p><span class="tag">Team Leadership</span></div>
+      <div class="card proj reveal d2"><div class="ico">💰</div><h3>Local Sourcing &amp; EPC Procurement</h3><p>Managed local sourcing and vendor relationships across diverse projects including EPC — optimising procurement for a 25% cost reduction and streamlined timelines.</p><span class="tag">−25% cost</span></div>
+      <div class="card proj reveal"><div class="ico">📊</div><h3>Vendor Performance Tracking</h3><p>Designed a system to track and assess vendor performance, improving vendor selection and negotiations — driving cost savings and better service levels.</p><span class="tag">Vendor Mgmt</span></div>
+      <div class="card proj reveal d1"><div class="ico">🏭</div><h3>India Assembly Unit</h3><p>With company support, established an assembly unit in India and started product assembly — meeting customer cost and delivery needs while reducing import shipment expenses.</p><span class="tag">Operations</span></div>
+      <div class="card proj reveal d2"><div class="ico">🏢</div><h3>Office Space Expansion</h3><p>Directed an office expansion with personalised touches and cost-effective solutions, creating a workspace that raised morale, belonging and productivity.</p><span class="tag">Project Mgmt</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap">
+    <span class="eyebrow reveal">// skills</span>
+    <h2 class="sec-title reveal">Toolkit &amp; <span class="grad-text">competencies</span></h2>
+    <p class="sec-sub reveal">Operational expertise backed by a practical, tech-friendly toolset.</p>
+    <div class="skill-grid">
+      <div class="card reveal">
+        <h3>Core strengths</h3>
+        <div class="bars">
+          <div><div class="bar-top"><span>Administration &amp; Facility Management</span><span>95%</span></div><div class="track"><div class="fill" data-w="95"></div></div></div>
+          <div><div class="bar-top"><span>Vendor Management &amp; Procurement</span><span>92%</span></div><div class="track"><div class="fill" data-w="92"></div></div></div>
+          <div><div class="bar-top"><span>Travel, Events &amp; Logistics</span><span>90%</span></div><div class="track"><div class="fill" data-w="90"></div></div></div>
+          <div><div class="bar-top"><span>IT Support &amp; Asset Management</span><span>85%</span></div><div class="track"><div class="fill" data-w="85"></div></div></div>
+          <div><div class="bar-top"><span>Process Automation (Power Automate)</span><span>80%</span></div><div class="track"><div class="fill" data-w="80"></div></div></div>
+          <div><div class="bar-top"><span>Project Management</span><span>85%</span></div><div class="track"><div class="fill" data-w="85"></div></div></div>
+        </div>
+      </div>
+      <div class="card reveal d1">
+        <h3>Software &amp; tools</h3>
+        <div class="chips">
+          <span>Advanced Excel</span><span>Power Automate</span><span>Office 365</span><span>Microsoft Teams</span><span>Intune</span><span>Jira</span><span>Confluence</span><span>Miro</span><span>Zoho Books</span><span>Zoho Inventory</span><span>Keka</span><span>HiBob</span><span>ERP / HRMS</span><span>Google Workspace</span><span>Windows · Mac · Linux</span><span>GitHub · GitLab</span><span>Azure · AWS</span><span>Copilot · ChatGPT</span><span>Networking</span>
+        </div>
+        <h3 style="margin:26px 0 14px">Also experienced in</h3>
+        <div class="chips">
+          <span>Calendar &amp; Executive Support</span><span>Expense Reports</span><span>Stakeholder Management</span><span>Budget Tracking</span><span>Payroll</span><span>Legal Documentation</span><span>Employee Transportation</span><span>MIS</span><span>SOPs</span><span>HVAC · MEP · BMS</span><span>ARIBA</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card learn reveal" style="margin-top:24px">
+      <div>
+        <span class="eyebrow" style="margin-bottom:8px">// currently learning</span>
+        <h3>Growing into <span class="grad-text">DevOps</span></h3>
+        <p>Building hands-on skills in Docker, Kubernetes, GitHub Actions, Terraform and Linux — documented in a public 90-day learning challenge.</p>
+      </div>
+      <a class="btn ghost" href="https://github.com/Kousikx/90DaysDevOps-Challenge" target="_blank" rel="noopener">View on GitHub ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="wrap">
+    <span class="eyebrow reveal">// education</span>
+    <h2 class="sec-title reveal">Academics &amp; <span class="grad-text">certifications</span></h2>
+    <p class="sec-sub reveal">Formal qualifications and continuous professional development.</p>
+    <div class="edu-grid">
+      <div style="display:grid;gap:22px">
+        <div class="card reveal"><span class="year">2023</span><h3>MBA — Operations &amp; Project Management</h3><p>Intellectual Institute of Management &amp; Information Technology</p></div>
+        <div class="card reveal d1"><span class="year">2020</span><h3>Bachelor of Business Administration</h3><p>Swami Vivekanand Subharti University</p></div>
+        <div class="card reveal d2"><span class="year">2010 · 2012</span><h3>10th &amp; 10+2</h3><p>West Bengal Council of Secondary Education</p></div>
+      </div>
+      <div class="card reveal d1">
+        <h3 style="margin-bottom:20px">Certifications</h3>
+        <ul class="cert-list">
+          <li>Microsoft Project Step by Step: Planning for Successful Project Management</li>
+          <li>Project Management Foundations — Project Management Institute</li>
+          <li>Agile Project Management with Jira Cloud — Project Management Institute</li>
+          <li>Teamwork Essentials — LinkedIn</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="card contact-box reveal">
+      <span class="eyebrow">// get in touch</span>
+      <h2>Let's build something <span class="grad-text">great together</span></h2>
+      <p>Open to administration, operations and IT-adjacent opportunities. I'd love to hear from you.</p>
+      <div class="cta">
+        <a class="btn primary" href="mailto:kousikx300@gmail.com">✉ Email me</a>
+        <a class="btn ghost" href="tel:+917503046967">📞 Call</a>
+        <a class="btn ghost" href="https://linkedin.com/in/koushikhhalder/" target="_blank" rel="noopener">🔗 LinkedIn</a>
+        <a class="btn ghost" href="assets/Koushik_H_Halder_CV.pdf" download>⬇ Download CV</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>© <span id="yr"></span> Koushik H Halder · Gurugram, India</footer>
+
+<script>
+(function(){
+  var d=document, $=function(s,c){return (c||d).querySelector(s)}, $$=function(s,c){return Array.prototype.slice.call((c||d).querySelectorAll(s))};
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // year
+  $('#yr').textContent=new Date().getFullYear();
+
+  // theme
+  var root=d.documentElement, tbtn=$('#theme');
+  try{var saved=localStorage.getItem('theme');if(saved){root.setAttribute('data-theme',saved)}}catch(e){}
+  function syncIcon(){tbtn.textContent=root.getAttribute('data-theme')==='light'?'☀️':'🌙'}
+  syncIcon();
+  tbtn.addEventListener('click',function(){
+    var next=root.getAttribute('data-theme')==='light'?'dark':'light';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next)}catch(e){}
+    syncIcon();
+  });
+
+  // mobile menu
+  var links=$('#links');
+  $('#burger').addEventListener('click',function(){links.classList.toggle('open')});
+  $$('#links a').forEach(function(a){a.addEventListener('click',function(){links.classList.remove('open')})});
+
+  // scroll: progress + nav + active link
+  var nav=$('#nav'), prog=$('#progress'), secs=$$('section[id]'), navA=$$('#links a');
+  function onScroll(){
+    var h=d.documentElement, max=h.scrollHeight-h.clientHeight;
+    prog.style.width=(max>0?(h.scrollTop/max)*100:0)+'%';
+    nav.classList.toggle('scrolled',h.scrollTop>20);
+    var cur='';
+    secs.forEach(function(s){if(s.getBoundingClientRect().top<=140)cur=s.id});
+    navA.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+cur)});
+  }
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  // typing effect
+  var roles=['Administration & Operations Professional','Facility & Vendor Management','Process Automation with Power Automate','IT Operations & Support'];
+  var el=$('#typed'), ri=0, ci=0, del=false;
+  function type(){
+    var w=roles[ri];
+    el.textContent=w.slice(0,ci);
+    if(!del&&ci===w.length){del=true;return setTimeout(type,1800)}
+    if(del&&ci===0){del=false;ri=(ri+1)%roles.length}
+    ci+=del?-1:1;
+    setTimeout(type,del?28:55);
+  }
+  if(reduce){el.textContent=roles[0]}else{type()}
+
+  // reveal + counters + bars
+  function count(n){
+    var to=+n.dataset.to, t0=null, dur=1600;
+    if(reduce){n.textContent=to;return}
+    function step(ts){
+      if(!t0)t0=ts;
+      var p=Math.min((ts-t0)/dur,1), e=1-Math.pow(1-p,3);
+      n.textContent=Math.round(to*e);
+      if(p<1)requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(!en.isIntersecting)return;
+      var t=en.target;
+      t.classList.add('in');
+      $$('.count',t).forEach(count);
+      $$('.fill',t).forEach(function(f){f.style.setProperty('--w',f.dataset.w+'%');f.style.width=f.dataset.w+'%'});
+      io.unobserve(t);
+    });
+  },{threshold:.15});
+  $$('.reveal').forEach(function(r){io.observe(r)});
+
+  // expandable jobs
+  $$('.more-btn').forEach(function(b){
+    b.addEventListener('click',function(){
+      var job=b.closest('.job'); job.classList.toggle('open');
+      b.textContent=job.classList.contains('open')?'Show less ↑':'Show more ↓';
+    });
+  });
+
+  // card spotlight
+  $$('.card').forEach(function(c){
+    c.addEventListener('pointermove',function(e){
+      var r=c.getBoundingClientRect();
+      c.style.setProperty('--mx',(e.clientX-r.left)+'px');
+      c.style.setProperty('--my',(e.clientY-r.top)+'px');
+    });
+  });
+
+  // photo tilt (desktop pointers only)
+  var ph=$('#photo');
+  if(!reduce&&window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+    ph.addEventListener('pointermove',function(e){
+      var r=ph.getBoundingClientRect(), x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+      ph.style.transform='rotateY('+(x*10)+'deg) rotateX('+(-y*10)+'deg)';
+    });
+    ph.addEventListener('pointerleave',function(){ph.style.transform=''});
+  }
+})();
+</script>
+</body>
+</html>
